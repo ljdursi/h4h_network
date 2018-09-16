@@ -50,21 +50,6 @@
 % Prints a trailing space in a smart way.
 \usepackage{xspace}
 
-%%
-% Some shortcuts for Tufte's book titles.  The lowercase commands will
-% produce the initials of the book title in italics.  The all-caps commands
-% will print out the full title of the book in italics.
-\newcommand{\vdqi}{\textit{VDQI}\xspace}
-\newcommand{\ei}{\textit{EI}\xspace}
-\newcommand{\ve}{\textit{VE}\xspace}
-\newcommand{\be}{\textit{BE}\xspace}
-\newcommand{\VDQI}{\textit{The Visual Display of Quantitative Information}\xspace}
-\newcommand{\EI}{\textit{Envisioning Information}\xspace}
-\newcommand{\VE}{\textit{Visual Explanations}\xspace}
-\newcommand{\BE}{\textit{Beautiful Evidence}\xspace}
-
-\newcommand{\TL}{Tufte-\LaTeX\xspace}
-
 % Prints the month name (e.g., January) and the year (e.g., 2008)
 \newcommand{\monthyear}{%
   \ifcase\month\or January\or February\or March\or April\or May\or June\or
@@ -72,18 +57,6 @@
   December\fi\space\number\year
 }
 
-
-% Prints an epigraph and speaker in sans serif, all-caps type.
-\newcommand{\openepigraph}[2]{%
-  %\sffamily\fontsize{14}{16}\selectfont
-  \begin{fullwidth}
-  \sffamily\large
-  \begin{doublespace}
-  \noindent\allcaps{#1}\\% epigraph
-  \noindent\allcaps{#2}% author
-  \end{doublespace}
-  \end{fullwidth}
-}
 
 % Inserts a blank page
 \newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
@@ -102,9 +75,6 @@
 \newcommand{\ie}{\textit{i.\hairsp{}e.}\xspace}
 \newcommand{\eg}{\textit{e.\hairsp{}g.}\xspace}
 \newcommand{\na}{\quad--}% used in tables for N/A cells
-\providecommand{\XeLaTeX}{X\lower.5ex\hbox{\kern-0.15em\reflectbox{E}}\kern-0.1em\LaTeX}
-\newcommand{\tXeLaTeX}{\XeLaTeX\index{XeLaTeX@\protect\XeLaTeX}}
-% \index{\texttt{\textbackslash xyz}@\hangleft{\texttt{\textbackslash}}\texttt{xyz}}
 \newcommand{\tuftebs}{\symbol{'134}}% a backslash in tt type in OT1/T1
 \newcommand{\doccmdnoindex}[2][]{\texttt{\tuftebs#2}}% command name -- adds backslash automatically (and doesn't add cmd to the index)
 \newcommand{\doccmddef}[2][]{%
@@ -164,14 +134,25 @@
 \setlength{\parskip}{\baselineskip}
 Copyright \copyright\ \monthyear
 \par\smallcaps{Published by \thanklesspublisher}
-\par\smallcaps{www.hpcforhealth.ca}
+\par\smallcaps{www.hpc4health.ca}
 \end{fullwidth}
 
 % r.9 introduction
 \cleardoublepage
 \chapter*{Executive Summary}
 
-Staggeringly brillint summary goes here.
+\begin{fullwidth}
+The explosion of human health data can mean new advances in human health care ---
+but only if the infrastructure, architecture, policies, and expertise are brought
+together in innovative ways to make effective, safe research use of the data.
+We have such an example of a collaborative center in Ontario, in HPC4Health.
+
+An innovative and successful shared platform for health genomics data and analysis,
+the original incarnation of HPC4Health in 2014 was a small pilot project between
+SickKids and UHN; today, the collaboration counts amongst its employees six scientific 
+and eight technical staff, works with four partner institutions, and provides 7,000
+compute cores and over 2 petabytes of secure data storage.
+\end{fullwidth}
 
 %%
 % Start the main matter (normal chapters)
@@ -239,7 +220,7 @@ development of national, truly precision, medicine practices.
 
 But making use of this data in an era of rapid growth raises multiple challenges.
 On the physical infrastructure side, simply making available the storage 
-resources to capture and archive the onrush of data is a challenge, along with
+resources to capture and archive the onrush of data is a daunting effort, along with
 providing the computational power to perform increasingly sophisticated analyses.
 Architecting, building, and maintaining these systems, particularly tuned to
 the needs of health research, requires a specialized approach.
@@ -256,62 +237,59 @@ of care to patients to zealously protect the security and their privacy is
 paramount; sophisticated and enforcable policies around data governance and consent
 are required, along with international best practices around security and monitoring.
 
-\chapter{HPC4Health --- a Made-in-Ontario Collaboration}
+The explosion of human health data can mean new advances in human health care ---
+but only if the infrastructure, architecture, policies, and expertise are brought
+together in innovative ways to make effective, safe research use of the data.
+We have such an example of a collaborative center in Ontario, in HPC4Health.
+
+\chapter{HPC4Health --- a Made-in-Ontario Approach}
 \label{ch:hpc4health}
 
-The \TL document classes define a style similar to the
-style Edward Tufte uses in his books and handouts.  Tufte's style is known
-for its extensive use of sidenotes, tight integration of graphics with
-text, and well-set typography.  This document aims to be at once a
-demonstration of the features of the \TL document classes
-and a style guide to their use.
+\newthought{As early and major players in genomic research and medicine}, in 2014 SickKids and 
+the University Health Network (UHN) faced a problem --- how to manage and make use of the influx 
+of genomic and other health data they were already charged with storing and analyzing.
+
+With a common challenge, and building on existing partnerships, the institutions formed a
+first-of-its-kind collaboration and in Ontario, combining forces and sharing
+resources to build HPC4Health\footnote{\url{http://www.hpc4health.ca}}: a
+shared-services approach, building a cross-institution center
+of infrastructure and expertise
+for the analysis of human health and genomic data.  This innovative 
+partnership gathered much attention in the hospital, genomics, and 
+research computing communities \citep{hn-hpc4health, gw-hpc4health, inside-hpc-h4h-mellanox, openstack-hpc}.
 
 \begin{figure}
   \includegraphics{HPC4Health_1.pdf}
-  \caption[HPC4Health Architecture Diagram]{The HPC4Health Architecture}
+  \caption[HPC4Health Architecture Diagram]{The HPC4Health Architecture.  An on-premesis (at SickKids) private
+  cloud is partitioned into tenant-controlled secure data environments for the institutions, with shared administrative
+  resources managed by the HPC4Health administrators.  Tenants can get technical support from the core
+  technical staff, or scientific support from the growing team of genomics, machine learning, and
+  health record experts. }
   \label{fig:hpc4health-architecture}
 \end{figure}
 
+HPC4Health's compute and storage infrastructure (Fig~\ref{fig:hpc4health-architecture})
+consists of an elastic secure cloud --- an arrangement that functions like an office building
+rented to multiple tentants.  The ``superintendant'' maintains core shared facilities, but
+the ``tenants'' have complete control of their own office space.   This is implemented through
+in an on-premises private OpenStack\footnote{\url{https://www.openstack.org}} cloud,
+partitioned securely into an administrative core and ``tenant'' environments.
 
-If you need more than two levels of section headings, you'll have to define
-them yourself at the moment; there are no pre-defined styles for anything below
-a \Verb|\subsection|.  As Bringhurst points out in \textit{The Elements of
-Typographic Style}, you should ``use as many levels of
-headings as you need: no more, and no fewer.''
+Crucially, HPC4Health is more than computational infrastructure;  it is also
+experience and expertise.  HPC4Health is governed by a sophisticated
+policy and data governance framework; it is governed by an executive committee
+and a science advisory panel; and is run by teams of technical and scientific
+personnel that every day make sure that health insight is successfully distilled from
+health data.
 
-The \TL classes will emit an error if you try to use
-\linebreak\Verb|\subsubsection| and smaller headings.
-
-% let's start a new thought -- a new section
-\newthought{In his later books}, Tufte
-starts each section with a bit of vertical space, a non-indented paragraph,
-and sets the first few words of the sentence in \textsc{small caps}.  To
-accomplish this using this style, use the \doccmddef{newthought} command:
-\begin{docspec}
-  \doccmd{newthought}\{In his later books\}, Tufte starts\ldots
-\end{docspec}
+The original incarnation of HPC4Health in 2014 was a small pilot project between
+SickKids and UHN; today, the collaboration counts amongst its employees six scientific 
+and eight technical staff, works with four partner institutions, and provides 7,000
+compute cores and over 2 petabytes\footnote{A petabyte is over a million gigabytes,
+and is enough to store over three years worth of 24/7 high-definition video or the
+raw data of nearly 7,500 whole genome sequencing experiments.} of secure data storage.
 
 
-\section{Sidenotes}\label{sec:sidenotes}
-One of the most prominent and distinctive features of this style is the
-extensive use of sidenotes.  There is a wide margin to provide ample room
-for sidenotes and small figures.  Any \doccmd{footnote}s will automatically
-be converted to sidenotes.\footnote{This is a sidenote that was entered
-using the \texttt{\textbackslash footnote} command.}  If you'd like to place ancillary
-information in the margin without the sidenote mark (the superscript
-number), you can use the \doccmd{marginnote} command.\marginnote{This is a
-margin note.  Notice that there isn't a number preceding the note, and
-there is no number in the main text where this note was written.}
-
-The specification of the \doccmddef{sidenote} command is:
-\begin{docspec}
-  \doccmd{sidenote}[\docopt{number}][\docopt{offset}]\{\docarg{Sidenote text.}\}
-\end{docspec}
-
-Both the \docopt{number} and \docopt{offset} arguments are optional.  If you
-provide a \docopt{number} argument, then that number will be used as the
-sidenote number.  It will change of the number of the current sidenote only and
-will not affect the numbering sequence of subsequent sidenotes.
 
 \chapter{The H4H Network --- Building on Strengths}
 \label{ch:hpc4health_network}

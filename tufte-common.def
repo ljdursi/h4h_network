@@ -350,9 +350,9 @@
   \hypersetup{%
     pdfborder = {0 0 0},
     bookmarksdepth = section,
-    citecolor = DarkGreen,
+    citecolor = DarkBlue,
     linkcolor = DarkBlue,
-    urlcolor = DarkGreen,
+    urlcolor = DarkBlue,
   }%
 }
 
@@ -445,7 +445,7 @@
 %%
 % Set page layout geometry
 
-\RequirePackage[letterpaper,left=1in,top=1in,headsep=2\baselineskip,textwidth=30pc,marginparsep=2pc,marginparwidth=8pc,textheight=44\baselineskip,headheight=\baselineskip]{geometry}
+\RequirePackage[letterpaper,left=1in,top=1in,headsep=2\baselineskip,textwidth=29pc,marginparsep=2pc,marginparwidth=9pc,textheight=44\baselineskip,headheight=\baselineskip]{geometry}
 
 \ifthenelse{\boolean{@tufte@afourpaper}}
   {\geometry{a4paper,left=24.8mm,top=27.4mm,headsep=2\baselineskip,textwidth=107mm,marginparsep=8.2mm,marginparwidth=49.4mm,textheight=49\baselineskip,headheight=\baselineskip}}
@@ -1568,7 +1568,7 @@
   \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\thanklesstitle}%
   \fontsize{18}{24}\selectfont\par\noindent\textcolor{gray}{\thanklesssubtitle}%
   \vfill%
-  \fontsize{14}{16}\selectfont\par\noindent{\textcolor{h4hblue}{\thanklessauthor}}%
+  \fontsize{14}{16}\selectfont\par\noindent{\textcolor{h4hblue}{\textit{\thanklessauthor}}}%
   \end{fullwidth}%
   }
   \thispagestyle{empty}%
