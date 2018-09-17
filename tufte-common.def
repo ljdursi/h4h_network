@@ -829,7 +829,7 @@
 %%
 % Italicize description run-in headings (instead of the default bold)
 
-\renewcommand*\descriptionlabel[1]{\hspace\labelsep\normalfont\em #1}
+% \renewcommand*\descriptionlabel[1]{\hspace\labelsep\normalfont\em #1}
 
 
 %%
