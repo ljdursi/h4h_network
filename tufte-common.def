@@ -1568,7 +1568,8 @@
   \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\thanklesstitle}%
   \fontsize{18}{24}\selectfont\par\noindent\textcolor{gray}{\thanklesssubtitle}%
   \vfill%
-  \fontsize{14}{16}\selectfont\par\noindent{\textcolor{h4hblue}{\textit{\thanklessauthor}}}%
+  % \fontsize{14}{16}\selectfont\par\noindent{\textcolor{h4hblue}{\textit{\thanklessauthor}}}%
+  \includegraphics[width=0.66\linewidth]{h4h_footer.pdf}
   \end{fullwidth}%
   }
   \thispagestyle{empty}%
