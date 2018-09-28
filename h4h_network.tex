@@ -5,7 +5,7 @@
 %%
 % Book metadata
 \title{The HPC4Health Network}
-\subtitle{Building an Ontario-wide platform for human health data}
+\subtitle{Building a Canada-wide platform for human health data}
 \author{HPC4Health: High-Performance Data and Computing for Health Care}
 \publisher{HPC4Health}
 
@@ -56,7 +56,6 @@
   July\or August\or September\or October\or November\or
   December\fi\space\number\year
 }
-
 
 % Inserts a blank page
 \newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
@@ -145,7 +144,7 @@ Copyright \copyright\ \monthyear
 The explosion of human health data can mean new advances in human health care ---
 but only if the infrastructure, architecture, policies, and expertise are brought
 together in innovative ways to make effective, safe research use of the data.
-We have such an example of a collaborative center in Ontario, in HPC4Health.
+We have such an example of a collaborative center in Canada, in HPC4Health.
 
 An innovative and successful shared platform for health genomics data and analysis,
 the original incarnation of HPC4Health in 2014 was a small pilot project between
@@ -154,7 +153,7 @@ and eight technical staff, works with four partner institutions, and provides 7,
 compute cores and over 2 petabytes of secure data storage.
 
 With continued success both technical and scientific HPC4Health faces a question --- 
-how best to expand to meet growing demand in institutions across Ontario.  Should 
+how best to expand to meet growing demand in institutions across Canada.  Should 
 the organization meet growing by increasing the capacity of its current operations,
 or by developing more such operations across the province, and connecting them
 all into a coherent whole?
@@ -168,12 +167,12 @@ data governance policies may require a more decentralized approach.
 
 The H4H Network, with pilot projects already in place in Montr\'eal and
 Hamilton, will build a coherent, shared network of resources and expertise available
-to health researchers across Ontario.  With each site modelled after the current HPC4Health
+to health researchers across Canada.  With each site modelled after the current HPC4Health
 site at SickKids, the network will use: a single, coherent security policy; a common
 software stack; and a federated network of genomic experts, all presenting a common
 set of services to researchers while providing international best-practices in security, privacy,
 and governance.  The H4H Network will unlock genomic data and local expertise for
-benefit of all Ontarians, while maintaining the security and privacy of all
+benefit of all Canadians, while maintaining the security and privacy of all
 patient data.
 \end{fullwidth}
 
@@ -196,8 +195,11 @@ of human health research.
   \label{fig:exponential-growth}
 \end{figure}
 
-In genomics, an exponentially-growing number of human genomes are
-being sequenced, making enormous amounts of evidence on the heredity
+In genomics\footnote{\textit{Genetics} is the study of single genes
+and their role in the heredity of conditions. \textit{Genomics}
+describes the study of an individual's genome -- the totality of
+all of their genetic information.}, an exponentially-growing number of human genomes are
+being sequenced, creating enormous amounts of evidence on the heredity
 of human disease states at previously inaccessible levels of detail
 (Fig~\ref{fig:exponential-growth}).  Data rates are only increasing as
 new devices become available, and new types of data are being
@@ -213,21 +215,21 @@ genomic information. However, two changes in the practice of medicine are
 poised to radically increase the rate of genomic and human health data creation
 in Canada.
 
-First, genomic medicine\footnote{Genomic Medicine, as defined by the NIH's
-National Human Genome Research Institute: ``An emerging medical discipline
-that involves using genomic information about an individual as part of their
-clinical care (\textit{e.g.}, for diagnostic or therapeutic decision-making)''} is beginning
+First, genomic medicine\footnote{\textit{Genomic Medicine} is a term used by NIH's
+National Human Genome Research Institute and others to describe medicine 
+that uses genomic information about an individual 
+for diagnostic or therapeutic decision-making.} is beginning
 to enter the standard of care, initially in the cases of hard-to-diagnose
 rare diseases or recurrent cancers, and starting to displace smaller
 and more limited genetic tests in other areas.  The sheer scale of clinical medicine 
 --- in Canada, hospital spending alone is nearly seventy times the research funding
 budget of the CIHR --- means that as adoption increases, clinical
-genomic data creation will rapidly outpace that of research genomic data.
+genomic data creation will rapidly and decisively outpace that of research genomic data.
 
 Second, information technology advances elsewhere in healthcare
 has led to the rapid adoption of Electronic Medical Record systems\footnote{
-Electronic Medical Records, or EMRs, are digital version of paper chapters
-in hospitals or doctors offices; Electronic Health Records, or EHRs, are
+\textit{Electronic Medical Records}, or EMRs, are digital version of paper chapters
+in hospitals or doctors offices; \textit{Electronic Health Records}, or EHRs, are
 more integrated systems combining information across practices and institutions.
 EMRs are mature and growing in adoption rapidly, while EHR systems are still
 some time from being common.}, describing a patient's condition, tests, and
@@ -264,9 +266,9 @@ are required, along with international best practices around security and monito
 The explosion of human health data can mean new advances in human health care ---
 but only if the infrastructure, architecture, policies, and expertise are brought
 together in innovative ways to make effective, safe research use of the data.
-We have such an example of a collaborative center in Ontario, in HPC4Health.
+We have an example of such a collaborative center in Canada, in HPC4Health.
 
-\chapter{HPC4Health --- a Made-in-Ontario Approach}
+\chapter{HPC4Health --- a Made-in-Canada Approach}
 \label{ch:hpc4health}
 
 \newthought{As early and major players in genomic research and medicine}, in 2014 SickKids and 
@@ -274,11 +276,11 @@ the University Health Network (UHN) faced a problem --- how to manage and make u
 of genomic and other health data they were already charged with storing and analyzing.
 
 With a common challenge, and building on existing partnerships, the institutions formed a
-first-of-its-kind collaboration and in Ontario, combining forces and sharing
+first-of-its-kind collaboration and in Canada, combining forces and sharing
 resources to build HPC4Health\footnote{\url{http://www.hpc4health.ca}}: a
 shared-services approach, building a cross-institution center
 of infrastructure and expertise
-for the analysis of human health and genomic data.  This innovative 
+for the computational analysis of human health and genomic data.  This innovative 
 partnership gathered much attention in the hospital, genomics, and 
 research computing communities \citep{hn-hpc4health, gw-hpc4health, inside-hpc-h4h-mellanox, openstack-hpc}.
 
@@ -288,20 +290,20 @@ research computing communities \citep{hn-hpc4health, gw-hpc4health, inside-hpc-h
   cloud is partitioned into tenant-controlled secure data environments for the institutions, with shared administrative
   resources managed by the HPC4Health administrators.  Tenants can get technical support from the core
   technical staff, or scientific support from the growing team of genomics, machine learning, and
-  health record experts. }
+  medical record experts. }
   \label{fig:hpc4health-architecture}
 \end{figure}
 
 HPC4Health's compute and storage infrastructure (Fig~\ref{fig:hpc4health-architecture})
-consists of an elastic secure cloud --- an arrangement that functions like an office building
-rented to multiple tentants.  The ``superintendant'' maintains core shared facilities, but
+consists of an elastic secure cloud --- an arrangement that functions like an commercial building
+rented to multiple tenants.  The ``superintendant'' maintains core shared facilities, but
 the ``tenants'' have complete control of their own office space.   This is implemented through
 in an on-premises private OpenStack\footnote{\url{https://www.openstack.org}} cloud,
 partitioned securely into an administrative core and ``tenant'' environments.
 
 Crucially, HPC4Health is more than computational infrastructure;  it is also
 experience and expertise.  HPC4Health is governed by a sophisticated
-policy and data governance framework; it is governed by an executive committee
+policy and data governance framework; it is managed and advised by an executive committee
 and a science advisory panel; and is run by teams of technical and scientific
 personnel that every day make sure that health insight is successfully distilled from
 health data.
@@ -309,19 +311,19 @@ health data.
 The original incarnation of HPC4Health in 2014 was a small pilot project between
 SickKids and UHN; today, the collaboration counts amongst its employees six scientific 
 and eight technical staff, works with four partner institutions, and provides 7,000
-compute cores and over 2 petabytes\footnote{A petabyte is over a million gigabytes,
+compute cores and over 2 petabytes\footnote{A \textit{petabyte} is over a million gigabytes,
 and is enough to store over three years worth of 24/7 high-definition video, or 
 raw data from nearly 7,500 whole genome sequencing experiments.} of secure data storage
 from its primary data centre in SickKids research institute building.
 
 With continued success both technical and scientific (with over XXX \textbf{TODO}
 publications), HPC4Health faces a question --- how best to expand to meet growing demand
-in institutions across Ontario.  Broadly, should HPC4Health meet demand by scaling
+in institutions across Canada.  Broadly, should HPC4Health meet demand by scaling
 vertically or horizontally\footnote{Scaling a system \textit{vertically}, or ``scaling up'',
 means making the components of a system more powerful --- bigger, faster,  greater capacity ---
 while scaling \textit{horizontally}, or ``scaling out'', means increasing the number of
 components.  The benefits of horizontal scaling when appliciable are generally flexibility,
-cost-effectiveness, and fault-tolerance, while that of vertical scaling are typcially 
+cost-effectiveness, and fault-tolerance, while that of vertical scaling are typically 
 simplicity.}; should HPC4Health serve more researchers by increasing the capacity of
 its current operations, or by developing more such operations across the province, and
 connecting them all into a coherent whole?
@@ -330,30 +332,27 @@ While HPC4Health operations has room to grow, there are several factors that wil
 the feasibility of vertical scaling over time; many of these are common to data-intensive
 science generally:
 
-\begin{description}
-  \item[Keeping compute near the data generation:]{Data generation rates of modern devices
-  are growing much more quickly than network speeds. Individual modern sequencing devices
-  can output data in excess of 1,000 gigabytes per hour, straining or saturating wide-area
-  network links. }
-  \item[Making use of local resources and expertise:]{Significant investments have been
-  made across Ontario in training of both highly qualified personnel, often in clusters with 
-  significant expertise in particular problems or analyses types, and in equipment.  Making
-  effective use of those resources is crucial to cost-effective expansion. }
-\end{description}
+The first concerns the importance of \textit{keeping compute near the data generation}.  Data generation rates of modern devices
+are growing much more quickly than network speeds. Individual modern sequencing devices
+can output data in excess of 1,000 gigabytes per hour, straining or saturating wide-area
+network links.
 
-\noindent and one particular to human health data:
+The second involves \textit{making efficient use of local resources and expertise}.  significant investments have been
+made across Canada in training of both highly qualified personnel, often in clusters with 
+significant expertise in particular problems or analyses types, and in equipment.  Making
+effective use of those resources is crucial to cost-effective expansion.
 
-\begin{description}
-  \item[Data governance policies:]{Many stewards of human health data have policies in place
-  about keeping data on-premesis or limiting where the data can go (such as going to another
-  jurisdiction) or who can see it.  In this case, building a local operation may be required. }
-\end{description}
+Finally, consistancy with existing \textit{data governance policies} is a hard requirement.
+Many stewards of human health data, who legally and ethically have extremely strict 
+responsibilities for the data entrusted to them by patients, have policies in place
+about keeping data on-premesis or limiting where the data can go (such as going to another
+jurisdiction) or who can be in control it.
 
 
 \chapter{The H4H Network --- Building on Strengths}
 \label{ch:hpc4health_network}
 
-\newthought{To build on HPC4Health successes and strengths and investments elsewhere},
+\newthought{To build on both HPC4Health successes and strengths and investments elsewhere},
 we take a system-wide approach with the H4H Network --- allowing the benefits of coordation
 such as economies of scale from consistent design, shared procurement, unified management;
 consistent services for researchers; and best-practice security adminstration --- while also
@@ -361,22 +360,22 @@ taking advantage of local clusters of expertise and resources, and placing facil
 data generation.
 
 \begin{figure}
-  \includegraphics{H4HNetwork.pdf}
+  \includegraphics{H4HNetwork_Canada.pdf}
   \caption[The H4H Network]{The H4H Network, with pilot projects already in place in Montr\'eal and
   Hamilton, will build a coherent, shared network of resources and expertise available to health 
-  researchers across Ontario.  With each site modelled after the current HPC4Health site at SickKids,
+  researchers across Canada.  With each site modelled after the current HPC4Health site at SickKids,
   the network will use: a single, coherent security policy; a common software stack; and a federated
   network of genomic experts, all presenting a consistent services to researchers while providing 
   international best-practices in security, privacy, and governance.}
   \label{fig:hpc4health_network}
 \end{figure}
 
-Pilot projects implementing systems modelled after HPC4Health --- within Ontario, in Hamilton,
-as well as out of province with the McGill secure health cloud --- show the feasibility exporting
-the architecture designed for the original HPC4Health.  But for researchers to make the best
+Pilot projects implementing secure health cloud systems modelled after HPC4Health at both McMaster
+and McGill have demonstrated the feasibility and
+utility of exporting the HPC4Health architecture.  But for researchers to make the best
 possible use of the health data entrusted to them by patients, and to take advantage of scale
-in purchasing, administration, and security, it is not enough to have Ontario's genomic research
-data isolated in silos.  These sites must be part of a connected network, with researchers able
+in purchasing, administration, and security, it is not enough to have Canada's genomic research
+data isolated in identical silos.  These sites must be part of a connected network, with researchers able
 to access the combined expertise --- and, when appropriately authorized, particticular 
 data sets --- from across the network.
 
@@ -389,7 +388,7 @@ and CanDIG\footnote{\href{https://www.distributedgenomics.ca}{distributedgenomic
 We propose to begin by expanding the Hamilton site and unifying it with common
 security domain, operational procedures, and data governance policies; and once those
 policies have been successfully developed to encompass multiple sites, expanding 
-to a third Ontario site at one of several possible institutes.
+to a fourth site at one of several possible institutes.
 
 %%
 % The back matter contains appendices, bibliographies, indices, glossaries, etc.
@@ -403,4 +402,3 @@ to a third Ontario site at one of several possible institutes.
 \printindex
 
 \end{document}
-
